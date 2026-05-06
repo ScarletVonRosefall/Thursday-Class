@@ -1,0 +1,78 @@
+/*
+  styles.css
+  A heavily commented stylesheet that explains common CSS features.
+  - CSS variables
+  - Selectors
+  - Layouts: Flexbox & Grid
+  - Responsive breakpoints
+  - Transitions
+*/
+
+:root{
+  /* CSS variables (custom properties) let you store values to reuse */
+  --bg: #f6f7fb;
+  --card: #fff;
+  --accent: #2b6cb0;
+  --muted: #666;
+  --radius: 8px;
+}
+
+/* Basic reset and typography */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background:var(--bg);
+  color:#111;
+  line-height:1.45;
+  padding:24px;
+}
+
+.site-header{margin-bottom:12px}
+.muted{color:var(--muted)}
+.small{font-size:.9rem}
+
+.top-nav{display:flex;gap:12px;margin-bottom:18px}
+.top-nav a{color:var(--accent);text-decoration:none}
+
+main{max-width:1000px;margin:0 auto}
+
+/* Demonstration card like boxes */
+.box{background:var(--card);padding:20px;border-radius:var(--radius);box-shadow:0 2px 8px rgba(0,0,0,0.06);}
+
+.flex-demo{display:flex;gap:12px;margin:12px 0}
+.flex-demo .box{flex:1;text-align:center}
+
+/* Grid example */
+.grid-demo{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:12px 0}
+.grid-demo .cell{background:linear-gradient(180deg,#fff,#f3f6fb);padding:18px;border-radius:6px;text-align:center}
+
+/* Form inline small */
+.inline-form{display:flex;gap:8px;margin:8px 0}
+.inline-form input{flex:1;padding:8px}
+
+/* Modal styles */
+.modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.4);visibility:hidden;opacity:0;transition:opacity .18s ease}
+.modal[aria-hidden="false"]{visibility:visible;opacity:1}
+.modal-content{background:var(--card);padding:18px;border-radius:10px;max-width:480px;width:90%}
+.modal .close{float:right}
+
+/* Table small adjustments */
+table{border-collapse:collapse;width:100%;margin:12px 0}
+th,td{border:1px solid #e6e9ef;padding:8px;text-align:left}
+
+/* Canvas border */
+#canvas{border:1px solid #ddd;background:#fff;display:block;margin-top:12px}
+
+/* Footer */
+.page-footer{margin-top:28px;color:var(--muted)}
+
+/* Responsive: switch grid to one column on narrow screens */
+@media (max-width:640px){
+  .grid-demo{grid-template-columns:1fr}
+  .top-nav{flex-wrap:wrap}
+}
+
+/* Small utility styles used by JS */
+.hidden{display:none}

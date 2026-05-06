@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simple Demo — HTML/CSS/JS Tutorial</title>
+  <!-- Link the external stylesheet (best practice) -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- This file is intentionally heavily commented as a step-by-step tutorial -->
+</head>
+<body>
+  <!-- Page header -->
+  <header class="site-header">
+    <h1>Simple Demo — Learn HTML, CSS, and JavaScript</h1>
+    <p class="muted">A single-file demo app with many examples and lots of comments.</p>
+  </header>
+
+  <nav class="top-nav">
+    <!-- Small anchor navigation to jump to sections -->
+    <a href="#html">HTML Basics</a>
+    <a href="#css">CSS Basics</a>
+    <a href="#js">JavaScript Basics</a>
+    <a href="#interactive">Interactive Demos</a>
+  </nav>
+
+  <main>
+    <!-- HTML demo section -->
+    <section id="html">
+      <h2>1. HTML Basics</h2>
+      <!-- Headings and paragraphs -->
+      <h3>Headings</h3>
+      <p>Use headings to structure content.</p>
+
+      <h3>Lists</h3>
+      <ul>
+        <li>Unordered list item</li>
+        <li>Another item</li>
+      </ul>
+
+      <h3>Links and images</h3>
+      <p>Example link: <a href="https://example.com" target="_blank" rel="noopener">Visit example.com</a></p>
+      <p>Placeholder image below (shows how to include images):</p>
+      <img src="https://via.placeholder.com/240x120.png?text=Placeholder" alt="placeholder example">
+
+      <h3>Form example (attributes)</h3>
+      <form id="demo-form">
+        <label for="name">Name:</label>
+        <input id="name" name="name" type="text" placeholder="Your name" required>
+        <label for="email">Email (type enforces format):</label>
+        <input id="email" name="email" type="email">
+        <button type="submit">Submit</button>
+      </form>
+
+      <h3>Table</h3>
+      <table>
+        <thead>
+          <tr><th>Item</th><th>Qty</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Apples</td><td>4</td></tr>
+          <tr><td>Bananas</td><td>7</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- CSS demo section -->
+    <section id="css">
+      <h2>2. CSS Basics</h2>
+      <p>This section demonstrates CSS concepts. See <code>styles.css</code> for comments and examples.</p>
+
+      <h3>Flexbox container</h3>
+      <div class="flex-demo">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+      </div>
+
+      <h3>Grid layout</h3>
+      <div class="grid-demo">
+        <div class="cell">A</div>
+        <div class="cell">B</div>
+        <div class="cell">C</div>
+        <div class="cell">D</div>
+      </div>
+
+      <h3>Variables & responsive</h3>
+      <p>Open <code>styles.css</code> to learn about CSS variables and media queries.</p>
+    </section>
+
+    <!-- JavaScript demo section -->
+    <section id="js">
+      <h2>3. JavaScript Basics</h2>
+      <p>This area contains examples for variables, functions, DOM manipulation, events, and async code. See <code>script.js</code> for detailed comments.</p>
+
+      <h3>Small code examples</h3>
+      <button id="say-hi">Say Hello</button>
+      <div id="greeting"></div>
+
+      <h3>Local Storage</h3>
+      <p>Type something and press save — the app will persist it to <em>localStorage</em>.</p>
+      <input id="persist-input" placeholder="Type here">
+      <button id="save-persist">Save</button>
+      <button id="load-persist">Load</button>
+      <div id="persist-result"></div>
+    </section>
+
+    <!-- Interactive Demos -->
+    <section id="interactive">
+      <h2>4. Interactive Demos</h2>
+
+      <h3>Simple TODO (DOM creation, events)</h3>
+      <form id="todo-form" class="inline-form">
+        <input id="todo-input" placeholder="New todo">
+        <button>Add</button>
+      </form>
+      <ul id="todo-list"></ul>
+
+      <h3>Modal (show/hide)</h3>
+      <button id="open-modal">Open Modal</button>
+      <div id="modal" class="modal" aria-hidden="true">
+        <div class="modal-content">
+          <button class="close">Close</button>
+          <h4>Modal Title</h4>
+          <p>This is a basic modal. Press Escape to close — it's implemented in JavaScript.</p>
+        </div>
+      </div>
+
+      <h3>Fetch example (async)</h3>
+      <button id="fetch-zen">Fetch a fun line from GitHub</button>
+      <pre id="fetch-result" class="muted small"></pre>
+
+      <h3>Canvas drawing</h3>
+      <canvas id="canvas" width="400" height="120"></canvas>
+    </section>
+
+    <footer class="page-footer">
+      <p class="muted">This demo is intentionally commented and contains many examples. Explore <code>styles.css</code> and <code>script.js</code>.</p>
+    </footer>
+  </main>
+
+  <!-- Link the JavaScript file at end of body to ensure DOM is ready -->
+  <script src="script.js"></script>
+</body>
+</html>
