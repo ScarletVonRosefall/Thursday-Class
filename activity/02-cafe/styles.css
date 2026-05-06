@@ -1,0 +1,74 @@
+/* Change these color variables first if you want a different cafe theme. */
+:root {
+  --page-bg: #fff8ef;
+  --section-bg: #fffdf9;
+  --text-color: #3e2a1f;
+  --accent-color: #8b5e3c;
+  --accent-light: #f2dcc5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--page-bg);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Header area with the navigation and the main cafe introduction. */
+.hero {
+  padding: 1.2rem 1.5rem 4rem;
+  background: linear-gradient(180deg, #fff6ea, #f5ddc4);
+}
+
+/* Navigation links sit in a simple row across the top. */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav a {
+  margin-left: 1rem;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.hero-copy {
+  max-width: 40rem;
+  margin: 4rem auto 0;
+  text-align: center;
+}
+
+.eyebrow {
+  color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+}
+
+.section {
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+/* Auto-fit helps menu cards wrap when the screen gets smaller. */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+/* Reuse this card style for menu items, offers, or highlights. */
+.card {
+  background: var(--section-bg);
+  border: 1px solid #f0d7c0;
+  border-radius: 1rem;
+  padding: 1.25rem;
+}

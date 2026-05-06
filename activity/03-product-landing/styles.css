@@ -1,0 +1,81 @@
+/* Change these variables to quickly restyle the landing page. */
+:root {
+  --page-bg: #f4f7ff;
+  --panel-bg: #ffffff;
+  --text-color: #172033;
+  --accent-color: #3f6df6;
+  --accent-light: #dce5ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--page-bg);
+  color: var(--text-color);
+}
+
+/* Hero uses a two-column layout for text and a product mockup area. */
+.hero {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  align-items: center;
+}
+
+.eyebrow {
+  color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+}
+
+/* Use this class for main action links like buttons. */
+.button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.85rem 1.3rem;
+  background: var(--accent-color);
+  color: white;
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+/* This box is a placeholder for an image, screenshot, or illustration. */
+.mockup {
+  background: linear-gradient(135deg, var(--accent-light), #eef2ff);
+  border: 2px dashed var(--accent-color);
+  border-radius: 1.5rem;
+  min-height: 260px;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.section {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 1rem 1.5rem 4rem;
+}
+
+/* Feature cards wrap automatically to fit different screen sizes. */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+/* Reusable panel style for each product feature. */
+.card {
+  background: var(--panel-bg);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  box-shadow: 0 12px 28px rgba(23, 32, 51, 0.08);
+}

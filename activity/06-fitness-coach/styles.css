@@ -1,0 +1,67 @@
+/* Change these color variables first to try a new fitness theme. */
+:root {
+  --page-bg: #f3f7f4;
+  --panel-bg: #ffffff;
+  --text-color: #163127;
+  --accent-color: #1e9f6e;
+  --accent-dark: #147452;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--page-bg);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Header section for your brand name, message, and main button. */
+.hero {
+  padding: 4.5rem 1.5rem;
+  text-align: center;
+  background: linear-gradient(135deg, #effbf5, #d8f3e6);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.8rem;
+  color: var(--accent-dark);
+}
+
+/* Reuse this button for sign-up links or service links. */
+.button {
+  display: inline-block;
+  margin-top: 1rem;
+  background: var(--accent-color);
+  color: white;
+  text-decoration: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 999px;
+}
+
+.section {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+}
+
+/* Auto-fit keeps the plan cards responsive on smaller screens. */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+/* Card style for plans, classes, or coaching offers. */
+.card {
+  background: var(--panel-bg);
+  border-left: 5px solid var(--accent-color);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  box-shadow: 0 10px 24px rgba(22, 49, 39, 0.08);
+}

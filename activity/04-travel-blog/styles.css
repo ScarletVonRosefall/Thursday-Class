@@ -1,0 +1,72 @@
+/* Change these variables to swap the blog colors quickly. */
+:root {
+  --page-bg: #eef7fb;
+  --panel-bg: #ffffff;
+  --text-color: #173042;
+  --accent-color: #0f8aa8;
+  --accent-soft: #d7f0f7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--page-bg);
+  color: var(--text-color);
+  line-height: 1.7;
+}
+
+/* Top intro area for the blog title and short summary. */
+.hero {
+  padding: 4rem 1.5rem 3rem;
+  text-align: center;
+  background: linear-gradient(180deg, #f9feff, #dff4fb);
+}
+
+.eyebrow,
+.tag {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+  color: var(--accent-color);
+}
+
+/* Main page layout: blog posts on the left, sidebar on the right. */
+.layout {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(240px, 1fr);
+  gap: 1.25rem;
+}
+
+/* Shared card style for blog posts and the sidebar box. */
+.post,
+.sidebar {
+  background: var(--panel-bg);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  box-shadow: 0 10px 24px rgba(23, 48, 66, 0.08);
+}
+
+/* This highlights the first post so it stands out from the others. */
+.featured {
+  background: linear-gradient(135deg, var(--accent-soft), #ffffff);
+}
+
+.post-list {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 760px) {
+  /* Stack the sidebar under the posts on small screens. */
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}

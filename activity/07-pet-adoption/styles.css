@@ -1,0 +1,61 @@
+/* Change these variables first if you want a new adoption page color set. */
+:root {
+  --page-bg: #fffdf6;
+  --panel-bg: #ffffff;
+  --text-color: #2e2d24;
+  --accent-color: #f0a641;
+  --accent-soft: #fff0d5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--page-bg);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Intro section for the adoption page title and short message. */
+.hero {
+  padding: 4rem 1.5rem 3rem;
+  text-align: center;
+  background: linear-gradient(180deg, #fffdf7, #fff1d6);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.8rem;
+  color: #b8791f;
+}
+
+.section {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+}
+
+/* Responsive grid for pet cards. */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+/* Card style for each animal profile. */
+.card {
+  background: var(--panel-bg);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  border: 1px solid #f5dbac;
+  box-shadow: 0 10px 24px rgba(46, 45, 36, 0.06);
+}
+
+/* Use this to highlight pet names with the accent color. */
+.card h3 {
+  color: #a46814;
+}

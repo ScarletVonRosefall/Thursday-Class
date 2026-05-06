@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modern PowerPoint in HTML</title>
+  <link rel="stylesheet" href="powerpoint-modern.css" />
+</head>
+<body>
+  <div class="app-shell" aria-label="Modern PowerPoint style presentation">
+    <header class="top-bar">
+      <div class="window-controls" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="document-meta">
+        <strong>Introduction Deck</strong>
+        <span>PowerPoint-style prototype reimagined in HTML, CSS, and JS</span>
+      </div>
+      <div class="title-actions">
+        <span class="pill">Present</span>
+        <button class="ghost-button" type="button" aria-label="Preview slide notes">
+          <span>Notes</span>
+        </button>
+      </div>
+    </header>
+
+    <div class="main-grid">
+      <aside class="sidebar" aria-label="Slide thumbnails">
+        <div class="sidebar-head">
+          <h2>Slides</h2>
+          <span class="mini-label" id="slideTotal">4 total</span>
+        </div>
+
+        <div class="thumbnail-list" id="thumbnailList"></div>
+      </aside>
+
+      <main class="canvas-area">
+        <div class="canvas-head">
+          <div>
+            <h2 id="canvasTitle">Welcome</h2>
+            <div class="slide-subline" id="canvasSubline">Minimal deck UI with layered motion and polished transitions.</div>
+          </div>
+
+          <div class="nav-controls">
+            <button class="nav-button" type="button" id="prevButton" aria-label="Previous slide">
+              <span aria-hidden="true">&#8592;</span>
+              <span>Prev</span>
+            </button>
+            <button class="nav-button" type="button" id="nextButton" aria-label="Next slide">
+              <span>Next</span>
+              <span aria-hidden="true">&#8594;</span>
+            </button>
+          </div>
+        </div>
+
+        <section class="canvas-stage" aria-live="polite">
+          <div class="slide-stack">
+            <article class="slide active hero-slide" data-kind="welcome" data-title="Welcome" data-thumb-title="Welcome" data-thumb-desc="Opening statement" data-subline="Minimal deck UI with layered motion and polished transitions.">
+              <div class="slide-panel">
+                <div class="ambient-grid" aria-hidden="true"></div>
+                <span class="floating-orb one" aria-hidden="true"></span>
+                <span class="floating-orb two" aria-hidden="true"></span>
+                <span class="floating-orb three" aria-hidden="true"></span>
+                <div class="slide-inner">
+                  <div class="hero-cluster">
+                    <div class="slide-kicker" data-animate="fade" style="--delay: 60;">Slide 01 · Opening</div>
+                    <h1 class="slide-title" data-animate="scale" style="--delay: 140;">
+                      <span class="gradient-text">Welcome to HTML &amp; CSS</span>
+                    </h1>
+                    <div class="hero-subtitle" data-animate style="--delay: 260;">Your first step into web development</div>
+                    <div class="type-line" data-animate style="--delay: 360;">
+                      <span class="typing">Design clean. Animate with intent.</span>
+                    </div>
+                    <p class="slide-copy" data-animate style="--delay: 460;">
+                      This presentation keeps PowerPoint structure recognizable while using modern spacing, restrained color accents, and motion tuned for clarity.
+                    </p>
+                    <div class="stats-row" data-animate style="--delay: 560;">
+                      <div class="hero-stat">
+                        <strong id="slideCountHeadline">4 slides</strong>
+                        <span>Focused story, no clutter</span>
+                      </div>
+                      <div class="hero-stat">
+                        <strong>Vanilla stack</strong>
+                        <span>HTML, CSS variables, JS state</span>
+                      </div>
+                      <div class="hero-stat">
+                        <strong>Motion-first</strong>
+                        <span>Fast, layered, professional</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="slide profile-slide" data-kind="profile" data-title="Introducer Profile" data-thumb-title="Introducer Profile" data-thumb-desc="Speaker overview" data-subline="Speaker details in a clean card layout with staggered reveal.">
+              <div class="slide-panel">
+                <div class="slide-inner">
+                  <div class="profile-panel">
+                    <div class="slide-kicker" data-animate="fade" style="--delay: 40;">Slide 02 · Profile</div>
+                    <h2 class="slide-title" data-animate style="--delay: 120;">Introducer Profile</h2>
+                    <p class="slide-copy" data-animate style="--delay: 220;">
+                      Professional card layout with clear metadata, soft elevation, and measured animation to keep focus on speaker identity.
+                    </p>
+                    <div class="bio-facts">
+                      <div class="fact-card" data-animate style="--delay: 340;">
+                        <strong>Context</strong>
+                        <p>I am a frontend designer and a photographer.</p>
+                      </div>
+                      <div class="fact-card" data-animate style="--delay: 420;">
+                        <strong>Design note</strong>
+                        <p>This website uses a clean PowerPoint-style layout with smooth motion and a modern card design.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="profile-card" data-animate="scale" style="--delay: 280;">
+                    <div class="profile-photo">
+                      <img src="Photos/Profile photo/Kim.png" alt="Portrait photo of Kim" />
+                    </div>
+                    <div class="bio-meta">
+                      <h3>Dalangin, Kim Adriel M.</h3>
+                      <div class="slide-subline">Digital introduction card</div>
+                      <div class="bio-lines">
+                        <div class="bio-line">
+                          <span>Name</span>
+                          <strong>Dalangin, Kim Adriel M.</strong>
+                        </div>
+                        <div class="bio-line">
+                          <span>Course &amp; Year</span>
+                          <strong>BSIT SM 2022-2025</strong>
+                        </div>
+                        <div class="bio-line">
+                          <span>University</span>
+                          <strong>University of Batangas — Alangilan Campus</strong>
+                        </div>
+                        <div class="bio-line">
+                          <span>Office</span>
+                          <strong>Digital Transformation Center</strong>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <div id="gallerySlidesMount"></div>
+
+            <article class="slide start-slide" data-kind="setup" data-title="Getting Started with VS Code" data-thumb-title="Getting Started" data-thumb-desc="VS Code onboarding" data-subline="Onboarding checklist, editor mockup, and final HTML reveal.">
+              <div class="slide-panel">
+                <div class="slide-inner">
+                  <div class="start-copy">
+                    <div class="slide-kicker" data-animate="fade" style="--delay: 40;">Final Slide · Setup</div>
+                    <h2 class="slide-title" data-animate style="--delay: 120;">Getting Started with VS Code</h2>
+                    <p class="slide-copy" data-animate style="--delay: 220;">
+                      VS Code is lightweight, extensible, and fast for first HTML projects.
+                    </p>
+
+                    <div class="checklist">
+                      <div class="step" style="--step-delay: 300;">
+                        <div class="check-mark">1</div>
+                        <div>
+                          <strong>Install VS Code</strong>
+                          <p>Open your folder and create <code>index.html</code>.</p>
+                        </div>
+                      </div>
+                      <div class="step" style="--step-delay: 420;">
+                        <div class="check-mark">2</div>
+                        <div>
+                          <strong>Add Live Server</strong>
+                          <p>Preview changes in browser while you edit.</p>
+                        </div>
+                      </div>
+                      <div class="step" style="--step-delay: 540;">
+                        <div class="check-mark">3</div>
+                        <div>
+                          <strong>Use browser dev tools</strong>
+                          <p>Inspect layout, test responsiveness, and tune styles.</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <p class="slide-copy" data-animate style="--delay: 660;">
+                      <span class="reveal-line">This entire “PowerPoint” is built in HTML, CSS, and JavaScript.</span>
+                    </p>
+                  </div>
+
+                  <div class="editor-card" data-animate="scale" style="--delay: 260;">
+                    <div class="editor-top">
+                      <strong>index.html</strong>
+                      <span class="code-caption">VS Code mockup · linked CSS and JS structure</span>
+                    </div>
+                    <div class="editor-body">
+                      <div class="line-numbers">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9</div>
+                      <div class="code-pane">
+<pre><span class="token-comment">&lt;!-- Clean file split --&gt;</span>
+<span class="token-tag">&lt;!DOCTYPE html&gt;</span>
+<span class="token-tag">&lt;html</span> <span class="token-attr">lang</span>=<span class="token-string">"en"</span><span class="token-tag">&gt;</span>
+  <span class="token-tag">&lt;head&gt;</span>
+    <span class="token-tag">&lt;link</span> <span class="token-attr">rel</span>=<span class="token-string">"stylesheet"</span> <span class="token-attr">href</span>=<span class="token-string">"powerpoint-modern.css"</span><span class="token-tag">&gt;</span>
+  <span class="token-tag">&lt;/head&gt;</span>
+  <span class="token-tag">&lt;body&gt;</span>
+    <span class="token-tag">&lt;script</span> <span class="token-attr">src</span>=<span class="token-string">"powerpoint-modern.js"</span> <span class="token-attr">defer</span><span class="token-tag">&gt;&lt;/script&gt;</span>
+  <span class="token-tag">&lt;/body&gt;</span>
+<span class="token-tag">&lt;/html&gt;</span></pre>
+                      </div>
+                    </div>
+                    <div class="editor-top">
+                      <div class="timeline">
+                        <small>Live preview</small>
+                        <div class="timeline-track">
+                          <div class="timeline-progress" id="editorProgress"></div>
+                        </div>
+                      </div>
+                      <span class="code-caption">HTML · CSS · JS</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer class="status-bar">
+      <div class="status-actions">
+        <span class="status-copy" id="slideStatus">Slide 1 of 4 <span>· Arrow keys enabled</span></span>
+      </div>
+      <div class="timeline" aria-hidden="true">
+        <small>Deck progress</small>
+        <div class="timeline-track">
+          <div class="timeline-progress" id="deckProgress"></div>
+        </div>
+      </div>
+      <div class="status-metrics">
+        <span class="tool-chip"><span class="dot"></span> Canvas 16:9</span>
+        <span class="tool-chip"><span class="dot"></span> Vanilla JS</span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="powerpoint-modern.js" defer></script>
+</body>
+</html>
