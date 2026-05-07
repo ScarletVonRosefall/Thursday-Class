@@ -49,16 +49,30 @@ body {
 
 /* This box is a placeholder for an image, screenshot, or illustration. */
 .mockup {
+  /* Large dashed container for product image or screenshot.
+     Change the min-height, padding, border to make it bigger or smaller. */
   background: linear-gradient(135deg, var(--accent-light), #eef2ff);
-  border: 2px dashed var(--accent-color);
-  border-radius: 1.5rem;
-  min-height: 260px;
-  display: grid;
-  place-items: center;
-  padding: 1.5rem;
+  border: 3px dashed var(--accent-color);
+  border-radius: 2rem;
+  min-height: 340px; /* bigger container like the reference */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
   text-align: center;
 }
 
+
+/* Product image inside the mockup */
+#product-image{
+  max-width:100%;
+  height:auto;
+  border-radius:12px;
+  box-shadow: 0 12px 30px rgba(23,32,51,0.06);
+}
+
+.mockup label{display:inline-block;margin-top:10px;color:var(--text-color);}
 .section {
   max-width: 75rem;
   margin: 0 auto;

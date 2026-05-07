@@ -7,12 +7,35 @@
   <!-- Link the external stylesheet (best practice) -->
   <link rel="stylesheet" href="styles.css">
   <!-- This file is intentionally heavily commented as a step-by-step tutorial -->
+  <!-- Quick edit guide (like styles.css):
+       - Change the page title: edit the <title> above.
+       - Change the site title banner: edit the <h1> below.
+       - To change the banner color: open `styles.css` and edit the `.site-header` background.
+       - To change button labels or ids: edit the <button> text or `id` attributes below.
+         (IDs like `say-hi`, `save-persist`, `todo-form` connect HTML to `script.js`.)
+       - To change the Fetch demo API: open `script.js` and replace the URL that
+         contains `api.github.com/zen`.
+       - To change the canvas text or colors: open `script.js` and edit the `fillText`/colors.
+       - To remove or rename examples: keep ids in sync with `script.js`.
+    -->
 </head>
 <body>
   <!-- Page header -->
   <header class="site-header">
     <h1>Simple Demo — Learn HTML, CSS, and JavaScript</h1>
-    <p class="muted">A single-file demo app with many examples and lots of comments.</p>
+    <!-- Beginner's guide (HTML file):
+         - This page is divided into sections: #html, #css, #js, #interactive.
+         - To change text, edit the content inside tags (for example, edit the <h1> above).
+         - To change styles (colors, spacing), open `styles.css` and look for the
+           commented selectors (body, .site-header, .btn, a, .box).
+         - To change behavior (buttons, TODO list, modal), open `script.js` where
+           each example is explained with comments. Selectors like `#say-hi` and
+           `#todo-form` connect the HTML to the JavaScript — keep the ids if you
+           change the element names.
+         - Accessibility tip: keep `alt` on images, use `<label for="...">` for
+           inputs, and use `aria-hidden` when toggling hide/show in JS (we already do).
+         CHANGE HERE: edit the <h1> above to change the site title.
+    -->
   </header>
 
   <nav class="top-nav">
@@ -89,8 +112,11 @@
 
     <!-- JavaScript demo section -->
     <section id="js">
-      <h2>3. JavaScript Basics</h2>
-      <p>This area contains examples for variables, functions, DOM manipulation, events, and async code. See <code>script.js</code> for detailed comments.</p>
+        <h2>3. JavaScript Basics</h2>
+        <p>This area contains examples for variables, functions, DOM manipulation, events, and async code. See 
+            <code>script.js</code> 
+            for detailed comments.
+        </p>
 
       <h3>Small code examples</h3>
       <button id="say-hi">Say Hello</button>

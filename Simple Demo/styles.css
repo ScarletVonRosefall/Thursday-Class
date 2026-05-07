@@ -1,72 +1,247 @@
 /*
   styles.css
   A heavily commented stylesheet that explains common CSS features.
-  - CSS variables
-  - Selectors
-  - Layouts: Flexbox & Grid
-  - Responsive breakpoints
-  - Transitions
+  This version is tuned for beginners: quick comments show exactly
+  which values to edit to change colors and spacing.
+
+  Quick edit guide (very simple):
+  - To change the page background color: edit the `background` value in `body`.
+  - To change the header (top banner) color: edit the `background` value in `.site-header`.
+  - To change the main button color: edit the `background` in `.btn`.
+  - To change link color: edit the `color` in `a`.
+  - To change card/panel background: edit the `background` in `.box`.
+  - To change rounded corner size: edit the `border-radius` values (look for `8px` or `6px`).
+
+  Tip for beginners: open this file and use your editor's find (Ctrl/Cmd+F)
+  to jump to the selector name (for example `.site-header`) and change the value.
 */
 
-:root{
-  /* CSS variables (custom properties) let you store values to reuse */
-  --bg: #f6f7fb;
-  --card: #fff;
-  --accent: #2b6cb0;
-  --muted: #666;
-  --radius: 8px;
+/* Basic reset and typography */
+* {
+  box-sizing: border-box;
 }
 
-/* Basic reset and typography */
-*{box-sizing:border-box}
-html,body{height:100%}
+html, body {
+  height: 100%;
+}
 body{
   margin:0;
   font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-  background:var(--bg);
-  color:#111;
+  /* Use a simple solid background color so it's easy to understand */
+  background: #f5f7ff; /* Change this value to change the whole page background color */
+  color:#0f1724;       /* Change this to change the main text color */
   line-height:1.45;
-  padding:24px;
+  padding:28px;
 }
 
-.site-header{margin-bottom:12px}
-.muted{color:var(--muted)}
-.small{font-size:.9rem}
+.site-header{
+  margin-bottom:18px;
+  padding:20px;
+  border-radius:8px;
+  /* Change this background color to change the header banner color */
+  background: #2b6cb0; /* header color - edit this to change header */
+  color:#ffffff;       /* header text color */
+  box-shadow: 0 8px 24px rgba(43,108,176,0.12);
+}
+.site-header h1 {
+  margin: 0 0 6px 0;
+}
 
-.top-nav{display:flex;gap:12px;margin-bottom:18px}
-.top-nav a{color:var(--accent);text-decoration:none}
+.muted {
+  color: #6b7280; /* muted/subtle text color (change to adjust subtitles) */
+}
 
-main{max-width:1000px;margin:0 auto}
+.small {
+  font-size: .95rem;
+}
+
+.top-nav {
+  display: flex;
+  gap: 12px;
+  margin: 14px 0 20px;
+  padding: 10px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(6px);
+}
+
+.top-nav a {
+  color: #2b6cb0;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 6px; /* link color in nav */
+}
+
+.top-nav a:hover {
+  background: #ffffff;
+  box-shadow: 0 4px 10px rgba(16,24,40,0.06);
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+}
 
 /* Demonstration card like boxes */
-.box{background:var(--card);padding:20px;border-radius:var(--radius);box-shadow:0 2px 8px rgba(0,0,0,0.06);}
 
-.flex-demo{display:flex;gap:12px;margin:12px 0}
-.flex-demo .box{flex:1;text-align:center}
+.box{
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(16,24,40,0.06);
+} /* card/panel background - change to alter card color */
+
+/* Primary button style used across demos */
+.btn{
+  background: #2b6cb0;
+  color: #ffffff;
+  border: 0;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform .12s, box-shadow .12s;
+} /* main button color - change this */
+
+.btn:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(43,108,176,0.18);
+}
+
+.btn.secondary{
+  background: #e76f51;
+} /* secondary button color */
+
+button{
+  font: inherit;
+}
+
+.flex-demo{
+  display: flex;
+  gap: 12px;
+  margin: 12px 0;
+}
+
+.flex-demo .box{
+  flex: 1;
+  text-align: center;
+  background: linear-gradient(180deg,#fff,#f7fbff);
+}
 
 /* Grid example */
-.grid-demo{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:12px 0}
-.grid-demo .cell{background:linear-gradient(180deg,#fff,#f3f6fb);padding:18px;border-radius:6px;text-align:center}
+.grid-demo{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin: 12px 0;
+}
+
+.grid-demo .cell{
+  background: linear-gradient(180deg,#ffffff,#ffffff);
+  padding: 18px;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid rgba(0,0,0,0.03);
+}
 
 /* Form inline small */
-.inline-form{display:flex;gap:8px;margin:8px 0}
-.inline-form input{flex:1;padding:8px}
+.inline-form{
+  display: flex;
+  gap: 8px;
+  margin: 8px 0;
+}
+
+.inline-form input{
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(16,24,40,0.06);
+}
+
+/* TODO list styles */
+#todo-list{
+  list-style: none;
+  padding-left: 0;
+  margin-top: 8px;
+}
+
+#todo-list li{
+  background: linear-gradient(90deg,#ffffff,#fbfbff);
+  padding: 10px;
+  border-radius: 8px;
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid rgba(16,24,40,0.04);
+}
+
+#todo-list li button{
+  background: transparent;
+  border: 1px solid rgba(16,24,40,0.06);
+  padding: 6px 8px;
+  border-radius: 6px;
+}
 
 /* Modal styles */
-.modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.4);visibility:hidden;opacity:0;transition:opacity .18s ease}
-.modal[aria-hidden="false"]{visibility:visible;opacity:1}
-.modal-content{background:var(--card);padding:18px;border-radius:10px;max-width:480px;width:90%}
-.modal .close{float:right}
+.modal{
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg,rgba(2,6,23,0.5),rgba(2,6,23,0.6));
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .18s ease;
+}
+
+.modal[aria-hidden="false"]{
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-content{
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 12px;
+  max-width: 520px;
+  width: 92%;
+  box-shadow: 0 20px 60px rgba(2,6,23,0.12);
+} /* modal panel background */
+
+.modal .close{
+  float: right;
+  background: transparent;
+  border: 0;
+  color: #6b7280;
+}
 
 /* Table small adjustments */
-table{border-collapse:collapse;width:100%;margin:12px 0}
-th,td{border:1px solid #e6e9ef;padding:8px;text-align:left}
+
+/* Link hover - brighter accent */
+a{
+  color: #2b6cb0; /* link color across site - change to alter links */
+}
+
+a:hover{
+  color: #e76f51;
+  text-decoration: underline;
+} /* link hover color */
 
 /* Canvas border */
-#canvas{border:1px solid #ddd;background:#fff;display:block;margin-top:12px}
+#canvas{
+  border-radius: 8px;
+  border: 1px solid rgba(16,24,40,0.06);
+  background: #fff;
+  display: block;
+  margin-top: 12px;
+}
 
 /* Footer */
-.page-footer{margin-top:28px;color:var(--muted)}
+.page-footer{
+  margin-top: 28px;
+  color: #6b7280;
+}
 
 /* Responsive: switch grid to one column on narrow screens */
 @media (max-width:640px){
