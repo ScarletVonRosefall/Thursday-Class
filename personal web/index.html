@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+ 
+  <title>My website</title>  <!-- Change "My website" to your own title! -->
+
+  <!-- Google Fonts — the pretty fonts used on this page -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet"/>
+
+  <!-- 🎨 This links to your CSS file (style.css) — that's where colors & design live -->
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+
+  <!-- ============================================================
+       🔝 NAVIGATION BAR
+         Change "✨ My Website" to your own website name!
+       ============================================================ -->
+  <nav>
+    <div class="nav-logo">✨ Anna</div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#hobbies">Hobbies</a>
+      <a href="#skills">Skills</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+
+  <!-- ============================================================
+       🌟 HERO SECTION — The big intro at the top
+         You can replace the emoji avatar with a real photo:
+           <img class="avatar" src="YOUR_PHOTO_URL" alt="My Photo">
+       ============================================================ -->
+  <section class="hero">
+
+    <!-- Profile picture (emoji for now — swap with a real photo!) -->
+    <div class="avatar" style="display:flex; align-items:center; justify-content:center; background:#f4e0d9; font-size:3.5rem;">🧑‍💻</div>
+
+    <h1>Hi, I'm <span id="hero-name">Your Name Here</span>! 👋</h1>
+    <p class="tagline" id="hero-tagline">Student · Dreamer · Future Developer</p>
+    <button class="hero-btn" onclick="scrollToSection('about')">Learn More About Me</button>
+
+  </section>
+
+
+  <!-- ============================================================
+       👤 ABOUT ME SECTION
+         Edit the text, facts, and details below!
+       ============================================================ -->
+  <section class="section fade-in" id="about">
+    <h2 class="section-title">About <span>Me</span></h2>
+    <div class="divider"></div>
+
+    <div class="about-grid">
+
+      <!--  Your bio paragraph (also editable in script.js!) -->
+      <div class="about-text">
+        <p id="about-text">
+          Hello! My name is <strong>Your Name</strong> and I am a student who loves learning
+          new things. I enjoy spending time with friends, exploring the internet, and discovering
+          what technology can do. This is my very first personal website — and I made it myself! 🎉
+        </p>
+      </div>
+
+      <!--  Your fun facts (also editable in script.js!) -->
+      <div class="fun-facts">
+        <div class="fact-card">🎂 <strong>Age:</strong>      <span id="fact-age">?? years old</span></div>
+        <div class="fact-card">📍 <strong>From:</strong>     <span id="fact-location">Your City, Philippines</span></div>
+        <div class="fact-card">🏫 <strong>School:</strong>   <span id="fact-school">Your School Name</span></div>
+        <div class="fact-card">🌟 <strong>Dream:</strong>    <span id="fact-dream">To become awesome!</span></div>
+        <div class="fact-card">🎵 <strong>Fave Song:</strong><span id="fact-song">Your Favorite Song</span></div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       🎯 HOBBIES SECTION
+         Change the emoji and label inside each hobby card!
+           To add a new hobby: copy one <div class="hobby-card"> block and paste it.
+           To remove a hobby: delete one <div class="hobby-card"> block.
+           Click a card to randomly change its emoji! (Try it!)
+       ============================================================ -->
+  <section class="section fade-in" id="hobbies" style="background: #f5ede2; max-width:100%; padding: 80px 0;">
+    <div style="max-width:860px; margin:0 auto; padding: 0 24px;">
+      <h2 class="section-title">My <span>Hobbies</span></h2>
+      <div class="divider"></div>
+
+      <div class="hobbies-grid">
+
+        <div class="hobby-card">
+          <div class="hobby-icon">🎮</div>
+          <div class="hobby-label">Gaming</div>
+        </div>
+
+        <div class="hobby-card">
+          <div class="hobby-icon">🎵</div>
+          <div class="hobby-label">Music</div>
+        </div>
+
+        <div class="hobby-card">
+          <div class="hobby-icon">📚</div>
+          <div class="hobby-label">Reading</div>
+        </div>
+
+        <div class="hobby-card">
+          <div class="hobby-icon">🍕</div>
+          <div class="hobby-label">Cooking</div>
+        </div>
+
+        <div class="hobby-card">
+          <div class="hobby-icon">🎨</div>
+          <div class="hobby-label">Drawing</div>
+        </div>
+
+        <div class="hobby-card">
+          <div class="hobby-icon">⚽</div>
+          <div class="hobby-label">Sports</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       📊 SKILLS SECTION
+         Change the skill name and data-level (0 to 100) for each bar.
+           data-level="75" means 75% skill level.
+           To add a skill: copy one <div class="skill-item"> block and paste it.
+       ============================================================ -->
+  <section class="section fade-in" id="skills">
+    <h2 class="section-title">My <span>Skills</span></h2>
+    <div class="divider"></div>
+
+    <div class="skills-list">
+
+      <div class="skill-item">
+        <label><span>🧠 Critical Thinking</span><span>85%</span></label>
+        <div class="skill-bar-bg"><div class="skill-bar-fill" data-level="85"></div></div>
+      </div>
+
+      <div class="skill-item">
+        <label><span>🤝 Teamwork</span><span>90%</span></label>
+        <div class="skill-bar-bg"><div class="skill-bar-fill" data-level="90"></div></div>
+      </div>
+
+      <div class="skill-item">
+        <label><span>🎨 Creativity</span><span>78%</span></label>
+        <div class="skill-bar-bg"><div class="skill-bar-fill" data-level="78"></div></div>
+      </div>
+
+      <div class="skill-item">
+        <label><span>💻 Computer Skills</span><span>65%</span></label>
+        <div class="skill-bar-bg"><div class="skill-bar-fill" data-level="65"></div></div>
+      </div>
+
+      <div class="skill-item">
+        <label><span>📢 Communication</span><span>80%</span></label>
+        <div class="skill-bar-bg"><div class="skill-bar-fill" data-level="80"></div></div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       🖼️ GALLERY SECTION
+         To add a real photo, replace the inside of a .gallery-item with:
+           <img src="YOUR_IMAGE_URL" alt="Description of photo">
+       ============================================================ -->
+  <section class="section fade-in" id="gallery" style="background: #f5ede2; max-width:100%; padding: 80px 0;">
+    <div style="max-width:860px; margin:0 auto; padding: 0 24px;">
+      <h2 class="section-title">My <span>Gallery</span></h2>
+      <div class="divider"></div>
+
+      <div class="gallery-grid">
+
+        <div class="gallery-item">
+          <div class="gallery-placeholder"><span>📷</span>Add a photo!</div>
+        </div>
+
+        <div class="gallery-item">
+          <div class="gallery-placeholder"><span>📷</span>Add a photo!</div>
+        </div>
+
+        <div class="gallery-item">
+          <div class="gallery-placeholder"><span>📷</span>Add a photo!</div>
+        </div>
+
+        <div class="gallery-item">
+          <div class="gallery-placeholder"><span>📷</span>Add a photo!</div>
+        </div>
+
+        <div class="gallery-item">
+          <div class="gallery-placeholder"><span>📷</span>Add a photo!</div>
+        </div>
+
+        <div class="gallery-item">
+          <div class="gallery-placeholder"><span>📷</span>Add a photo!</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       💬 FAVORITE QUOTE SECTION
+         Change the quote and author (also editable in script.js!)
+       ============================================================ -->
+  <section class="quote-section fade-in">
+    <p class="quote-text" id="fav-quote">
+      "The secret of getting ahead is getting started."
+    </p>
+    <p class="quote-author" id="quote-author">— Mark Twain</p>
+  </section>
+
+
+  <!-- ============================================================
+       📬 CONTACT / SOCIAL LINKS SECTION
+         Replace # with your real social media links!
+           For email use: href="mailto:youremail@example.com"
+       ============================================================ -->
+  <section class="section fade-in" id="contact">
+    <h2 class="section-title">Contact <span>Me</span></h2>
+    <div class="divider"></div>
+
+    <div class="contact-cards">
+
+      <a class="contact-card" href="mailto:youremail@example.com">
+        <div class="contact-icon">📧</div>
+        Email Me
+      </a>
+
+      <a class="contact-card" href="#" target="_blank">
+        <div class="contact-icon">📘</div>
+        Facebook
+      </a>
+
+      <a class="contact-card" href="#" target="_blank">
+        <div class="contact-icon">📸</div>
+        Instagram
+      </a>
+
+      <a class="contact-card" href="#" target="_blank">
+        <div class="contact-icon">🎵</div>
+        TikTok
+      </a>
+
+      <a class="contact-card" href="#" target="_blank">
+        <div class="contact-icon">💼</div>
+        LinkedIn
+      </a>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       🦶 FOOTER
+         Change "Your Name" below (also editable in script.js!)
+       ============================================================ -->
+  <footer>
+    Made with ❤️ by <span id="footer-name">Your Name</span> · My First Website 🎉
+  </footer>
+
+
+  <!-- ⚙️ This links to your JavaScript file (script.js) — that's where the magic happens! -->
+  <script src="script.js"></script>
+
+</body>
+</html>
